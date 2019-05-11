@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_store"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="Store" />
+
+    <item
+        android:id="@+id/navigation_cart"
+        android:icon="@drawable/ic_shopping_cart_menu_24dp"
+        android:title="Cart" />
+
+    <item
+        android:id="@+id/navigation_order"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="Order" />
+
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="Profile" />
+
+
+
+</menu>

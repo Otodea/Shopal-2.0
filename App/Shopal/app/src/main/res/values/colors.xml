@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#673ab7</color>
+    <color name="colorPrimaryDark">#320b86</color>
+    <color name="colorAccent">#320b86</color>
+    <color name="colorIndigoDark">#320b86</color>
+    <color name="coloIndigoPrimary">#673ab7</color>
+    <color name="colorIndigoLight">#9a67ea</color>
+    <color name="colorCardBackground">#424242</color>
+    <color name="backgroundColor">#303030</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="lightGreyBackground">#F0F0F0</color>
+    <color name="colorDarkGrey">#212121</color>
+    <color name="lightGrey">#D8D8D8</color>
+    <color name="backround">#ab86e1</color>
+</resources>

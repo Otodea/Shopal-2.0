@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ShoppingCartFragment">
+
+    <LinearLayout
+        android:id="@+id/no_order_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+
+        android:layout_centerInParent="true"
+        android:foregroundGravity="center_horizontal"
+        android:gravity="center"
+        android:visibility="visible"
+        >
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/ic_shopping_cart_black_24dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="No orders placed"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/swipe_to_refresh"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".view.MainActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_orders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/checkout_layout"
+        android:padding="5dp"
+        />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <LinearLayout
+        android:id="@+id/empty_orders_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:layout_centerInParent="true"
+        android:foregroundGravity="center_horizontal"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/ic_shopping_cart_black_24dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="No Pending Orders"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

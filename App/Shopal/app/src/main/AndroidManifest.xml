@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.shopal">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="whateverString"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_shopping_cart_black_24dp"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:appComponentFactory">
+        <activity android:name=".view.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.RecommendationActivity"></activity>
+        <activity android:name=".view.DriverBarcodeActivity" />
+
+        <service
+            android:name=".utils.DriverTrackingService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDJnA4lCwCrqjSbUiZYlP7Snb1C8Msr5nw" />
+
+        <activity android:name=".view.MapLauncherActivity" />
+        <activity android:name=".view.DriverOrderActivity" />
+
+    </application>
+
+</manifest>

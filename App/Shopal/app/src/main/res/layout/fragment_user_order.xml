@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.UserOrderFragment">
+
+    <LinearLayout
+        android:id="@+id/no_order_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:layout_centerInParent="true"
+        android:foregroundGravity="center_horizontal"
+        android:gravity="center"
+        android:visibility="visible"
+        >
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/ic_shopping_cart_black_24dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="You have no order placed!"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_to_refresh"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/order_summary_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="3dp"
+                android:padding="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp"
+                android:visibility="invisible"
+                >
+
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/order_summary_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Order Summary"
+                        android:textColor="@color/colorCardBackground"
+                        android:textSize="25sp"
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/cart_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/quantity_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/checkout_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/progress_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="3dp"
+                android:padding="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="3dp"
+                android:visibility="invisible"
+                >
+
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/one_progress_icon"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/circle_grey"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/one_progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Order Received "
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/two_progress_icon"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/circle_grey"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/two_progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Your Cart is on the way"
+                            android:textSize="12sp"
+                             />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/three_progress_icon"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/circle_grey"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/three_progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Your order is here"
+                            android:textSize="12sp"
+                             />
+
+
+
+                    </LinearLayout>
+
+                    <Button android:id="@+id/map_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:text="Track my order"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/colorWhite"
+                        />
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
